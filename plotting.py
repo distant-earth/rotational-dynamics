@@ -1,6 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
+import os
 plt.rcParams["font.family"] = "Times New Roman"
 plt.rcParams.update({'font.size': 20})
 plt.rcParams['mathtext.fontset'] = 'custom'
@@ -35,6 +36,9 @@ def fmt_y(x, pos):
     else:
     	return r'${}$'.format(a, b)
 
+if not os.path.exists('./pictures'):
+		os.makedirs('./pictures')
+
 plt.figure(figsize=(8,8))
 plt.title(fr'$P_0 = {round(P0, 2)}$ h, $\quad\gamma_0 = {round(phi0)}$'+r'$^{\circ}$'+'\n'+fr'$q$ = {round(q, 2)} au, '+
 fr'$\quad e$ = {round(ecc, 2)}, '+'\n'+fr'$A$/$C = {round(AC, 2)}$, $\quad B$/$C = {round(BC, 2)}$', fontsize=18)
@@ -46,7 +50,7 @@ plt.gca().yaxis.set_major_formatter(fmt_y)
 step = 1
 plt.plot(t[::step], P[::step] - P0, 'r-', lw = 1)
 plt.tight_layout()
-plt.savefig('dP.eps', format = 'eps')
+plt.savefig('pictures/dP.eps', format = 'eps')
 
 plt.figure(figsize=(8,8))
 plt.title(fr'$P_0 = {round(P0, 2)}$ h, $\quad\gamma_0 = {round(phi0)}$'+r'$^{\circ}$'+'\n'+fr'$q$ = {round(q, 2)} au, '+
@@ -59,6 +63,6 @@ plt.gca().yaxis.set_major_formatter(fmt_y)
 step = 1
 plt.plot(t[::step], new_angle[::step] - phi0, 'r-', lw = 1)
 plt.tight_layout()
-plt.savefig('d_gamma.eps', format = 'eps')
+plt.savefig('pictures/d_gamma.eps', format = 'eps')
 
 plt.show()
