@@ -1,0 +1,9 @@
+30.6d0 					### P_0 (h)
+5.96d0 					### q (R_earth)
+4.26d0 					### ecc
+140.d0 					### phi_0 (deg)
+0.d0 					### theta_0 (deg)
+0.d0 					### psi_0 (deg)
+0.7294d0 				### A/C
+0.9479d0 				### B/C
+100.d0 					### geocentric sphere radius (R_earth)
