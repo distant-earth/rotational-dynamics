@@ -1,5 +1,7 @@
 # Numerical integration of the rotational dynamics of an asteroid during close approach to the Earth
 
+[![DOI](https://zenodo.org/badge/889539887.svg)](https://doi.org/10.5281/zenodo.14173662)
+
 This repository provides the source code for studying the rotational dynamics of an asteroid during close approach to the Earth. The project is built upon the [DOP853 integrator](http://www.unige.ch/~hairer/prog/nonstiff/dop853.f) developed by E. Hairer and G. Wanner. See [this article](https://link.springer.com/article/10.1134/S0038094623700107) for further details on the problem.
 
 ## Folder overview:
