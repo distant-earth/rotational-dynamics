@@ -13,7 +13,8 @@ By default, this folder contains the following files:
 - **Makefile**
 - **INPUT** — file with a list of input parameters
 - **LICENSE.md** and **README.md**
-- **orbit** subfolder (new in version 2.0)
+- **orbit** (subfolder)
+  - **parser.py** — orbit approximation tool (new in version 2.0)
 
 ## INPUT:
 You may specify the following parameters of the problem in the INPUT file:
