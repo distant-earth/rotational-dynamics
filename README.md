@@ -41,7 +41,7 @@ To use the script, do the following steps:
 1) Generate ephemeris for the preferred asteroid using [Horizons System](https://ssd.jpl.nasa.gov/horizons/app.html#/).
 Use the following settings:
 - **Ephemeris Type:** vector table
-- **Target Body:** your preferred asteroid
+- **Target Body:** your preferred asteroid (e.g. Apophis)
 - **Coordinate Center:** Geocentric
 - **Time Specification:** Specify time span. _We recommend a 2-4 days time span. For example, if close approach of an asteroid to the Earth is happening on the 2029-Apr-13 21:46 (Apophis, see [NASA small-body database](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/)), consider using 2029-Apr-11 21:46 as start time and 2029-Apr-15 21:46 as end time._ 
 Step size: 1 hour.
