@@ -13,6 +13,7 @@ By default, this folder contains the following files:
 - **Makefile**
 - **INPUT** — file with a list of input parameters
 - **LICENSE.md** and **README.md**
+- **orbit** subfolder (new in version 2.0)
 
 ## INPUT:
 You may specify the following parameters of the problem in the INPUT file:
@@ -31,6 +32,23 @@ Makefile allows you to use the following commands (Linux terminal):
 
 _Before using_ `make clean`, _make sure to save your RESULT file elsewhere (if necessary)!_
 
+## Orbit approximation tool (new in version 2.0)
 
+The project contains Python script that performs hyperbolic approximation of asteroid's orbit in the vicinity of the Earth (within a sphere of 100 Earth radii).
 
+To use the script, do the following steps:
+1) Generate ephemeris for the preferred asteroid using [Horizons System](https://ssd.jpl.nasa.gov/horizons/app.html#/).
+Use the following settings:
+- **Ephemeris Type:** vector table
+- **Target Body:** your preferred asteroid
+- **Coordinate Center:** Geocentric
+- **Time Specification:** Specify time span. _We recommend a 2-4 days time span. For example, if close approach of an asteroid to the Earth is happening on the 2029-Apr-13 21:46 (Apophis, see [NASA small-body database](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/)), consider using 2029-Apr-11 21:46 as start time and 2029-Apr-15 21:46 as end time._ 
+Step size: 1 hour.
+![изображение](https://github.com/user-attachments/assets/6d1e7ea9-5352-4105-9d70-682b87f04151)
+- **Vector Table Settings:**
+![изображение](https://github.com/user-attachments/assets/71c0f36a-7315-43a0-8f67-571591128c6b)
+2) Save generated ephemeris as _'horizons_results.txt'_ (default name) into the **orbit** subfolder of this project.
+3) Open the **orbit** subfolder.
+4) From Linux terminal, run the following command: ```python3 parser.py```
 
+The script generates three images, shows them and saves into 'orbit/pictures' folder (created automatically). Hyperbolic orbit parameters $a$, $e$ and $q = a(e - 1)$ are approximated separately for two hyperbolic branches and listed in the terminal output.
